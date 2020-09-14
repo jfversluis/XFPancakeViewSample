@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" x:Class="PancakeViewSample.MainPage">
+    <StackLayout>
+        <yummy:PancakeView BackgroundGradientStartPoint="0,0" BackgroundGradientEndPoint="0,1" Padding="24" CornerRadius="0">
+            <yummy:PancakeView.BackgroundGradientStops>
+                <yummy:GradientStopCollection>
+                    <yummy:GradientStop Color="Red" Offset="0" />
+                    <yummy:GradientStop Color="Orange" Offset="0.5" />
+                    <yummy:GradientStop Color="Yellow" Offset="1" />
+                </yummy:GradientStopCollection>
+            </yummy:PancakeView.BackgroundGradientStops>
+            <Label Text="PancakeView Sample!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36" Margin="0,20,0,0" />
+        </yummy:PancakeView>
+
+        <yummy:PancakeView Margin="20" BackgroundColor="Azure" CornerRadius="10, 20, 30, 40" Shadow="{yummy:ShadowMarkup Color=Red, Offset='10,10'}">
+            <!--<yummy:PancakeView.Shadow>
+                <yummy:DropShadow Color="Orange" Offset="10,10" />
+            </yummy:PancakeView.Shadow>-->
+            <yummy:PancakeView.Border>
+                <yummy:Border Thickness="10">
+                    <yummy:Border.GradientStops>
+                        <yummy:GradientStopCollection>
+                            <yummy:GradientStop Color="Red" Offset="0" />
+                            <yummy:GradientStop Color="Orange" Offset="0.5" />
+                            <yummy:GradientStop Color="Yellow" Offset="1" />
+                        </yummy:GradientStopCollection>
+                    </yummy:Border.GradientStops>
+                </yummy:Border>
+            </yummy:PancakeView.Border>
+            <StackLayout>
+                <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10" />
+                <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0" />
+                <Label FontSize="16" Padding="30,24,30,0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Learn more at " />
+                                <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+        </yummy:PancakeView>
+    </StackLayout>
+</ContentPage>
